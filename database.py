@@ -7,7 +7,7 @@ def get_database(database):
     CONNECTION_STRING = "mongodb+srv://moorepj:$tandForSomething1441|@agsrmt.6jcivn0.mongodb.net/test"
 
     # Create a connection using MongoClient. You can import MongoClient or use pymongo.MongoClient
-    client = MongoClient(os.getenv("MONGODB_URI", "mongodb://127.0.0.1:27017/database"))
+    client = MongoClient(CONNECTION_STRING)
 
     # Create the database for our example (we will use the same database throughout the tutorial
     return client[database]
