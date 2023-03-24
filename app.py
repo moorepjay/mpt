@@ -1,5 +1,8 @@
 from dash import Dash, html, dcc
 import dash
+import pandas as pd
+
+from database import get_database
 
 app = Dash(__name__, use_pages=True)
 
