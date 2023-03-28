@@ -8,13 +8,12 @@ from plotly.subplots import make_subplots
 import dash
 
 import constant
-from database import get_database
+from database import get_collection
 
 dash.register_page(__name__)
 
 # Connect to mongodb.
-db = get_database('ags_dashboard')
-collection = db['lost_ark_import']
+collection = get_collection('lost_ark')
 
 # Create price data df from mongo collection.
 sell_records = collection.find()

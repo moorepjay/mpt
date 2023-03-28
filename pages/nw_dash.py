@@ -8,13 +8,12 @@ from plotly.subplots import make_subplots
 import dash
 
 import constant
-from database import get_database
+from database import get_collection
 
 dash.register_page(__name__)
 
 # Connect to mongodb.
-db = get_database('ags_dashboard')
-collection = db['new_world_import']
+collection = get_collection('new_world')
 
 # Create price data df from mongo collection.
 nw_sell_records = collection.find()
@@ -160,7 +159,7 @@ layout = html.Div(children=[
         html.Div([
             dcc.Graph(id='new_world_individual_seller_info'),
             'Input Seller Name (case-sensitive): ',
-            dcc.Input(id='new_world_user_input', value='大师', type='text')
+            dcc.Input(id='new_world_user_input', value='SLENT', type='text')
         ])
     ),
 ])
