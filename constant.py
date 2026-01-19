@@ -1,4 +1,4 @@
-CONNECTION_STRING = "mongodb+srv://moorepj:RL05NFeWyexis43T@agsrmt.6jcivn0.mongodb.net/?retryWrites=true&w=majority"
+CONNECTION_STRING = 
 
 LOST_ARK_SERVER_DROPDOWN_OPTIONS = [
     {'label': 'Adrinne', 'value': 'Adrinne'},
